@@ -150,7 +150,7 @@ FocusScope {
                     text: viewTitleHeight.text
                     font
                     {
-                        pixelSize: viewTitleHeight.font.pixelSize
+                        pointSize: viewTitleHeight.font.pointSize
                         bold: viewTitleHeight.font.bold
                     }
                 }
@@ -160,7 +160,7 @@ FocusScope {
                     text: i18nc("Title of the view of the playlist", "Now Playing")
 
                     color: myPalette.text
-                    font.pixelSize: elisaTheme.defaultFontPixelSize * 2
+                    font.pointSize: elisaTheme.defaultFontPointSize * 2
                     Layout.topMargin: elisaTheme.layoutVerticalMargin
                   }
 

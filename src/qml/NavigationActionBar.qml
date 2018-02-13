@@ -115,7 +115,7 @@ FocusScope {
                 TextMetrics {
                     id: albumTextSize
                     text: albumLabel.text
-                    font.pixelSize: albumLabel.font.pixelSize
+                    font.pointSize: albumLabel.font.pointSize
                     font.bold: albumLabel.font.bold
                 }
 
@@ -132,7 +132,7 @@ FocusScope {
                     color: myPalette.text
 
                     font {
-                        pixelSize: elisaTheme.defaultFontPixelSize * 2
+                        pointSize: elisaTheme.defaultFontPointSize * 2
                     }
 
                     visible: secondaryTitle !== ""
@@ -141,7 +141,7 @@ FocusScope {
                 TextMetrics {
                     id: authorTextSize
                     text: authorLabel.text
-                    font.pixelSize: authorLabel.font.pixelSize
+                    font.pointSize: authorLabel.font.pointSize
                     font.bold: authorLabel.font.bold
                 }
 
@@ -156,7 +156,7 @@ FocusScope {
                     Layout.alignment: Qt.AlignLeft | Qt.AlignVCenter
 
                     font {
-                        pixelSize: (secondaryTitle !== "" ? elisaTheme.defaultFontPixelSize : elisaTheme.defaultFontPixelSize * 2)
+                        pointSize: (secondaryTitle !== "" ? elisaTheme.defaultFontPointSize : elisaTheme.defaultFontPointSize * 2)
                     }
 
                     elide: Text.ElideRight
