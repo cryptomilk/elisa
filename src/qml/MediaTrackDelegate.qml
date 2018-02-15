@@ -20,7 +20,8 @@
 
 import QtQuick 2.7
 import QtQuick.Layouts 1.2
-import QtQuick.Controls 1.2
+import QtQuick.Controls 2.2
+import QtQuick.Controls 1.4 as Controls1
 import QtQuick.Window 2.2
 import QtGraphicalEffects 1.0
 import org.kde.elisa 1.0
@@ -48,21 +49,21 @@ FocusScope {
     signal enqueue(var data)
     signal replaceAndPlay(var data)
 
-    Action {
+    Controls1.Action {
         id: replaceAndPlayAction
         text: i18nc("Clear play list and enqueue current track", "Play Now and Replace Play List")
         iconName: "media-playback-start"
         onTriggered: replaceAndPlay(trackData)
     }
 
-    Action {
+    Controls1.Action {
         id: enqueueAction
         text: i18nc("Enqueue current track", "Enqueue")
         iconName: "media-track-add-amarok"
         onTriggered: enqueue(trackData)
     }
 
-    Action {
+    Controls1.Action {
         id: viewDetailsAction
         text: i18nc("Show track metadata", "View Details")
         iconName: "help-about"
@@ -264,7 +265,7 @@ FocusScope {
                     sourceComponent: Row {
                         anchors.centerIn: parent
 
-                        ToolButton {
+                        Controls1.ToolButton {
                             id: detailsButton
 
                             height: elisaTheme.delegateHeight
@@ -273,7 +274,7 @@ FocusScope {
                             action: viewDetailsAction
                         }
 
-                        ToolButton {
+                        Controls1.ToolButton {
                             id: enqueueButton
 
                             height: elisaTheme.delegateHeight
@@ -282,7 +283,7 @@ FocusScope {
                             action: enqueueAction
                         }
 
-                        ToolButton {
+                        Controls1.ToolButton {
                             id: clearAndEnqueueButton
 
                             height: elisaTheme.delegateHeight

@@ -17,9 +17,10 @@
  * Boston, MA 02110-1301, USA.
  */
 
-import QtQuick 2.5
+import QtQuick 2.7
 import QtQuick.Layouts 1.2
-import QtQuick.Controls 1.2
+import QtQuick.Controls 2.2
+import QtQuick.Controls 1.4 as Controls1
 import QtQuick.Window 2.2
 import QtGraphicalEffects 1.0
 import org.kde.elisa 1.0
@@ -53,7 +54,7 @@ FocusScope {
 
     height: (hasAlbumHeader ? elisaTheme.delegateWithHeaderHeight : elisaTheme.delegateHeight)
 
-    Action {
+    Controls1.Action {
         id: removeFromPlayList
         text: i18nc("Remove current track from play list", "Remove")
         iconName: "list-remove"
@@ -62,7 +63,7 @@ FocusScope {
         }
     }
 
-    Action {
+    Controls1.Action {
         id: playNow
         text: i18nc("Play now current track from play list", "Play Now")
         iconName: "media-playback-start"
@@ -73,7 +74,7 @@ FocusScope {
         }
     }
 
-    Action {
+    Controls1.Action {
         id: pauseNow
         text: i18nc("Pause current track from play list", "Pause")
         iconName: "media-playback-pause"
@@ -81,7 +82,7 @@ FocusScope {
         onTriggered: playListEntry.pausePlayback()
     }
 
-    Action {
+    Controls1.Action {
         id: showInfo
         text: i18nc("Show track metadata", "View Details")
         iconName: "help-about"
@@ -284,8 +285,7 @@ FocusScope {
                         Layout.preferredWidth: 0
                     }
 
-
-                    ToolButton {
+                    Controls1.ToolButton {
                         id: infoButton
 
                         implicitHeight: elisaTheme.smallDelegateToolButtonSize
@@ -299,7 +299,7 @@ FocusScope {
                         Layout.alignment: Qt.AlignVCenter | Qt.AlignRight
                     }
 
-                    ToolButton {
+                    Controls1.ToolButton {
                         id: playPauseButton
 
                         implicitHeight: elisaTheme.smallDelegateToolButtonSize
@@ -319,7 +319,7 @@ FocusScope {
                         Layout.maximumHeight: elisaTheme.smallDelegateToolButtonSize
                         Layout.alignment: Qt.AlignVCenter | Qt.AlignHCenter
 
-                        ToolButton {
+                        Controls1.ToolButton {
                             id: removeButton
 
                             anchors.fill: parent
